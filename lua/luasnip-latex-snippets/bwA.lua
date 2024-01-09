@@ -29,6 +29,7 @@ function M.retrieve(not_math)
         parse_snippet({ trig = "case", name = "cases" }, "\\begin{cases}\n\t$1\n\\end{cases}"),
 
         parse_snippet({ trig = "ali", name = "align" }, "\\begin{align}\n\t$1\n\t\\label{equ:$2}\n\\end{align}$0"),
+        parse_snippet({ trig = "item", name = "Itemize" }, "\\begin{itemize}\n\t\\item$1\n\\end{itemize}$0"),
         parse_snippet({ trig = "fig", name = "figure" }, "\\begin{figure}[!h]\n\t% \\vspace{-2mm}\n\t% \\setlength{\\abovecaptionskip}{0.0cm}\n\t% \\setlength{\\belowcaptionskip}{0.0cm}\n\t\\captionsetup{width=\\linewidth}\n\t\\centerline{\\includegraphics[width=${1:.7}\\linewidth]{${2:figure_path}}}\n\t\\caption{${3:figure_title}}\n\t\\label{fig:${4:figure_label}}\n\t% \\vspace{-2mm}\n\\end{figure}$0"),
 
         s({ trig = "bigfun", name = "Big function" }, {
